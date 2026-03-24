@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samarkand House — Murree Hills, Pakistan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f5f0e8; --warm-white: #faf8f4; --sand: #d4c4a0;
+  --terracotta: #b5632a; --deep-brown: #2a1f14; --forest: #3d4a35;
+  --gold: #c9a84c; --light-gold: #e8d5a0; --stone: #8a7d6b; --text: #2a1f14;
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior:smooth; }
+body { font-family:'Jost',sans-serif; background:var(--warm-white); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+/* STICKY MOBILE BAR */
+.sticky-bar { display:none; position:fixed; bottom:0; left:0; right:0; z-index:600; background:var(--deep-brown); padding:12px 16px; gap:10px; align-items:center; box-shadow:0 -4px 20px rgba(0,0,0,.3); }
+.sticky-bar a { flex:1; text-align:center; padding:13px 8px; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; font-weight:600; text-decoration:none; border-radius:3px; font-family:'Jost',sans-serif; }
+.sticky-book { background:var(--gold); color:var(--deep-brown); }
+.sticky-wa { background:rgba(201,168,76,.12); color:var(--cream); border:1px solid rgba(201,168,76,.35); }
+@media(max-width:768px) { .sticky-bar { display:flex; } body { padding-bottom:68px; } }
+
+/* NAV */
+nav { position:fixed; top:0; left:0; right:0; z-index:500; padding:24px 60px; display:flex; align-items:center; justify-content:space-between; transition:all .4s ease; }
+nav.scrolled { background:rgba(42,31,20,.97); padding:16px 60px; backdrop-filter:blur(10px); }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:400; letter-spacing:4px; color:var(--cream); text-transform:uppercase; text-decoration:none; }
+.nav-links { display:flex; gap:32px; align-items:center; }
+.nav-links a { font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:rgba(245,240,232,.78); text-decoration:none; transition:color .3s; }
+.nav-links a:hover { color:var(--gold); }
+.nav-cta { background:var(--gold)!important; color:var(--deep-brown)!important; padding:10px 22px; font-weight:500; }
+@media(max-width:900px) { nav { padding:20px 24px; } nav.scrolled { padding:14px 24px; } .nav-links { display:none; } }
+
+/* HERO */
+#hero { height:100vh; position:relative; display:flex; align-items:flex-end; justify-content:center; overflow:hidden; }
+.hero-bg {
+  position:absolute; inset:0;
+  background: linear-gradient(to bottom, rgba(20,13,8,.25) 0%, rgba(20,13,8,.1) 40%, rgba(20,13,8,.72) 100%),
+    url('https://static.wixstatic.com/media/b5ec9b_748e2fa238ed442191cc8cdd7a1e93f0~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_748e2fa238ed442191cc8cdd7a1e93f0~mv2.jpg') center/cover no-repeat;
+  transform:scale(1.05); animation:heroZoom 12s ease-out forwards;
+}
+@keyframes heroZoom { from{transform:scale(1.05);}to{transform:scale(1);} }
+.hero-content { position:relative; z-index:2; text-align:center; padding-bottom:100px; animation:fadeUp 1.2s ease .4s both; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);} }
+.hero-eyebrow { font-size:11px; letter-spacing:5px; text-transform:uppercase; color:var(--cream); margin-bottom:20px; display:inline-block; padding:6px 14px; text-shadow: 0 1px 4px rgba(0,0,0,.6); }
+.hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(52px,8vw,96px); font-weight:300; color:var(--cream); line-height:1; margin-bottom:20px; }
+.hero-title em { font-style:italic; color:var(--light-gold); }
+.hero-subtitle { font-size:13px; letter-spacing:3px; text-transform:uppercase; color:rgba(245,240,232,.7); margin-bottom:48px; }
+.hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+.btn-primary { background:var(--gold); color:var(--deep-brown); padding:16px 40px; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:500; cursor:pointer; border:none; text-decoration:none; display:inline-block; transition:all .3s; font-family:'Jost',sans-serif; }
+.btn-primary:hover { background:var(--light-gold); }
+.btn-outline { background:transparent; color:var(--cream); padding:16px 40px; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:400; cursor:pointer; border:1px solid rgba(245,240,232,.4); text-decoration:none; display:inline-block; transition:all .3s; font-family:'Jost',sans-serif; }
+.btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+.scroll-hint { position:absolute; bottom:36px; left:50%; transform:translateX(-50%); color:rgba(245,240,232,.45); font-size:10px; letter-spacing:3px; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,rgba(245,240,232,.5),transparent); animation:scrollPulse 2s ease infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:.5;}50%{opacity:1;} }
+
+/* SECTION BASICS */
+section { padding:120px 60px; }
+.section-label { font-size:10px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,4vw,58px); font-weight:300; line-height:1.1; color:var(--deep-brown); margin-bottom:24px; }
+.section-title em { font-style:italic; color:var(--terracotta); }
+.divider { width:48px; height:1px; background:var(--gold); margin-bottom:32px; }
+
+/* STORY */
+#story { background:var(--deep-brown); display:grid; grid-template-columns:1fr 1fr; gap:0; padding:0; }
+.story-image { height:700px; background:url('https://static.wixstatic.com/media/b5ec9b_e8896e725d7b43ff96a478679715a631~mv2.jpeg/v1/fill/w_1200,h_1600,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_e8896e725d7b43ff96a478679715a631~mv2.jpeg') center/cover; position:relative; }
+.story-image::after { content:''; position:absolute; inset:0; background:linear-gradient(to right,transparent,rgba(42,31,20,.3)); }
+.story-text { background:var(--deep-brown); padding:100px 80px; display:flex; flex-direction:column; justify-content:center; }
+.story-text .section-label { color:var(--gold); }
+.story-text .section-title { color:var(--cream); }
+.story-text .divider { background:var(--gold); }
+.story-text p { font-size:16px; line-height:1.9; color:rgba(245,240,232,.75); margin-bottom:20px; font-weight:300; }
+.story-fact { margin-top:40px; padding:28px; border-left:2px solid var(--gold); background:rgba(201,168,76,.08); }
+.story-fact p { font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--light-gold); line-height:1.5; margin:0; }
+
+/* BOOKING SECTION */
+#booking { background:var(--cream); padding:100px 0; }
+.booking-header { text-align:center; margin-bottom:40px; }
+.booking-header .divider { margin:0 auto 32px; }
+.booking-tabs { display:flex; border-bottom:1px solid rgba(138,125,107,.25); margin-bottom:0; padding:0 60px; }
+.tab-btn { flex:1; padding:16px 24px; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:2.5px; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--stone); border-bottom:2px solid transparent; margin-bottom:-1px; transition:all .3s; }
+.tab-btn.active { color:var(--deep-brown); border-bottom-color:var(--gold); font-weight:500; }
+.tab-btn:hover:not(.active) { color:var(--deep-brown); }
+.tab-content { display:none; }
+.tab-content.active { display:block; }
+.tab-content#tab-stays { max-width:1100px; margin:0 auto; }
+.tab-content#tab-events { padding-top:32px; }
+@media(max-width:900px) { .booking-hero { height:280px; } .booking-hero-content { padding:40px 24px; } }
+
+/* STAYS TAB */
+.stays-intro { text-align:center; padding:36px 0 28px; }
+.stays-intro p { font-size:14px; color:var(--stone); max-width:560px; margin:0 auto 10px; line-height:1.85; }
+.wa-soft-link { font-size:13px; color:var(--stone); }
+.wa-soft-link a { color:var(--terracotta); text-decoration:none; font-weight:500; }
+.wa-soft-link a:hover { text-decoration:underline; }
+
+/* BOOKING GRID */
+.booking-grid { display:grid; grid-template-columns:1fr; gap:0; }
+.calendar-panel { background:var(--deep-brown); padding:56px 64px; color:var(--cream); text-align:center; }
+.cal-header-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:28px; display:block; }
+.cal-nav { display:flex; align-items:center; justify-content:center; gap:28px; margin-bottom:28px; }
+.cal-month { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:400; letter-spacing:1px; color:var(--cream); min-width:210px; text-align:center; }
+.cal-arrow { background:none; border:1px solid rgba(245,240,232,.2); color:var(--cream); width:38px; height:38px; cursor:pointer; font-size:18px; transition:all .3s; flex-shrink:0; }
+.cal-arrow:hover { border-color:var(--gold); color:var(--gold); }
+.cal-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:4px; max-width:500px; margin:0 auto; }
+.cal-day-name { text-align:center; font-size:10px; letter-spacing:1.5px; text-transform:uppercase; color:var(--stone); padding:9px 0; font-weight:300; }
+.cal-day { text-align:center; padding:12px 4px; font-size:14px; cursor:pointer; border-radius:2px; transition:all .2s; color:rgba(245,240,232,.85); position:relative; }
+.cal-day:hover:not(.booked):not(.empty):not(.past) { background:rgba(201,168,76,.2); color:var(--gold); }
+.cal-day.booked { color:rgba(245,240,232,.25); cursor:not-allowed; text-decoration:line-through; }
+.cal-day.booked::after { content:''; position:absolute; bottom:3px; left:50%; transform:translateX(-50%); width:4px; height:4px; border-radius:50%; background:var(--terracotta); }
+.cal-day.past { color:rgba(245,240,232,.28); cursor:default; }
+.cal-day.selected { background:var(--gold); color:var(--deep-brown)!important; font-weight:500; }
+.cal-day.in-range { background:rgba(201,168,76,.15); }
+.cal-day.empty { cursor:default; }
+.cal-legend { display:flex; gap:24px; margin-top:20px; font-size:11px; color:var(--stone); flex-wrap:wrap; justify-content:center; }
+.legend-dot { width:8px; height:8px; border-radius:50%; display:inline-block; margin-right:5px; vertical-align:middle; }
+.date-readout { display:grid; grid-template-columns:1fr 1fr; gap:1px; margin-top:28px; background:rgba(245,240,232,.1); max-width:500px; margin-left:auto; margin-right:auto; }
+.date-readout-col { background:rgba(255,255,255,.04); padding:16px 24px; text-align:left; }
+.date-readout-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); margin-bottom:6px; display:block; }
+.date-readout-val { font-family:'Cormorant Garamond',serif; font-size:20px; color:var(--cream); line-height:1.3; }
+
+/* REQUEST FORM */
+.request-panel { background:var(--warm-white); padding:48px; display:flex; flex-direction:column; }
+.request-title { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; color:var(--deep-brown); margin-bottom:4px; }
+.request-sub { font-size:11px; letter-spacing:1.5px; color:var(--stone); text-transform:uppercase; margin-bottom:24px; }
+
+/* SPACE SELECTOR */
+.spaces-section { margin-bottom:20px; }
+.spaces-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); margin-bottom:10px; display:block; }
+.space-card { border:1px solid rgba(138,125,107,.25); padding:14px 16px; margin-bottom:8px; cursor:pointer; transition:all .25s; }
+.space-card.main-house { cursor:default; border-color:var(--gold); background:rgba(201,168,76,.05); }
+.space-card-row { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.space-card-left { display:flex; flex-direction:column; gap:2px; }
+.space-name { font-size:13px; font-weight:500; color:var(--deep-brown); }
+.space-detail { font-size:11px; color:var(--stone); }
+.space-price-col { text-align:right; flex-shrink:0; }
+.space-price { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--deep-brown); }
+.space-price-sub { font-size:10px; color:var(--stone); }
+.space-badge { font-size:9px; letter-spacing:1.5px; text-transform:uppercase; background:rgba(201,168,76,.15); color:var(--terracotta); padding:3px 8px; border-radius:1px; white-space:nowrap; }
+.addon-checkbox { display:flex; align-items:center; gap:10px; }
+.addon-check { width:16px; height:16px; border:1px solid rgba(138,125,107,.4); background:transparent; appearance:none; cursor:pointer; flex-shrink:0; position:relative; transition:all .2s; }
+.addon-check:checked { background:var(--gold); border-color:var(--gold); }
+.addon-check:checked::after { content:'✓'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:10px; color:var(--deep-brown); }
+.addon-avail { font-size:10px; color:var(--stone); margin-top:4px; margin-left:26px; }
+
+/* FORM FIELDS */
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
+.form-group label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); }
+.form-group input, .form-group select, .form-group textarea { border:1px solid rgba(138,125,107,.3); background:transparent; padding:11px 13px; font-family:'Jost',sans-serif; font-size:14px; color:var(--deep-brown); outline:none; transition:border-color .3s; -webkit-appearance:none; border-radius:0; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--gold); }
+.form-group textarea { height:70px; resize:none; }
+
+/* PRICE SUMMARY */
+.price-summary { background:var(--deep-brown); border-radius:2px; margin:20px 0; overflow:hidden; }
+.price-summary-header { padding:14px 20px; border-bottom:1px solid rgba(245,240,232,.08); }
+.price-summary-header-label { font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--stone); }
+.price-breakdown { padding:16px 20px; display:flex; flex-direction:column; gap:10px; }
+.price-line { display:flex; justify-content:space-between; align-items:baseline; }
+.price-line-label { font-size:12px; color:rgba(245,240,232,.6); }
+.price-line-val { font-family:'Cormorant Garamond',serif; font-size:16px; color:rgba(245,240,232,.8); }
+.price-line-val.muted { font-size:13px; color:var(--stone); font-family:'Outfit',sans-serif; }
+.price-total-row { display:flex; justify-content:space-between; align-items:baseline; padding:14px 20px; border-top:1px solid rgba(245,240,232,.12); }
+.price-total-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--stone); }
+.price-total-val { font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--cream); }
+.price-deposit-row { display:flex; justify-content:space-between; align-items:center; padding:14px 20px; background:rgba(201,168,76,.12); border-top:1px solid rgba(201,168,76,.2); }
+.price-deposit-label { font-size:11px; color:var(--gold); letter-spacing:1px; }
+.price-deposit-label span { display:block; font-size:10px; color:var(--stone); letter-spacing:0; margin-top:2px; }
+.price-deposit-val { font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--gold); font-weight:400; }
+
+/* REQUEST BUTTON */
+.request-btn { width:100%; background:var(--deep-brown); color:var(--cream); border:1px solid var(--gold); padding:17px; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; cursor:pointer; transition:all .3s; font-weight:500; display:flex; align-items:center; justify-content:center; gap:10px; margin-top:4px; }
+.request-btn:hover { background:var(--gold); color:var(--deep-brown); }
+.request-note { font-size:11px; color:var(--stone); text-align:center; margin-top:10px; line-height:1.7; }
+
+/* EVENTS TAB */
+.events-panel { display:grid; grid-template-columns:1fr 1fr; gap:0; box-shadow:0 30px 80px rgba(42,31,20,.13); margin-top:32px; }
+.events-left { background:var(--deep-brown); padding:64px 56px; display:flex; flex-direction:column; justify-content:center; }
+.events-left .section-label { color:var(--gold); margin-bottom:12px; }
+.events-left h3 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3vw,42px); font-weight:300; color:var(--cream); line-height:1.1; margin-bottom:20px; }
+.events-left h3 em { font-style:italic; color:var(--light-gold); }
+.events-left .divider { background:var(--gold); }
+.events-left p { font-size:15px; line-height:1.9; color:rgba(245,240,232,.7); font-weight:300; margin-bottom:16px; }
+.event-types { display:flex; flex-direction:column; gap:12px; margin:28px 0 0; }
+.event-type { display:flex; align-items:center; gap:14px; padding:14px 18px; border:1px solid rgba(245,240,232,.1); background:rgba(245,240,232,.04); }
+.event-type-icon { font-size:20px; flex-shrink:0; }
+.event-type-text strong { display:block; font-size:13px; color:var(--cream); font-weight:500; margin-bottom:3px; }
+.event-type-text span { font-size:12px; color:rgba(245,240,232,.55); }
+.events-right { background:var(--warm-white); padding:64px 56px; display:flex; flex-direction:column; justify-content:center; }
+.events-right h4 { font-family:'Cormorant Garamond',serif; font-size:26px; font-weight:400; color:var(--deep-brown); margin-bottom:10px; }
+.manager-intro { font-size:14px; line-height:1.85; color:var(--stone); margin-bottom:28px; font-weight:300; }
+.manager-card { background:var(--cream); padding:22px; border-left:3px solid var(--gold); margin-bottom:24px; }
+.manager-card p:first-child { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.manager-card p:last-child { font-size:13px; color:var(--deep-brown); line-height:1.65; }
+.wa-cta { display:flex; align-items:center; gap:14px; background:var(--deep-brown); color:var(--cream); border:1px solid var(--gold); padding:18px 22px; text-decoration:none; transition:all .3s; margin-bottom:14px; }
+.wa-cta:hover { background:var(--gold); color:var(--deep-brown); }
+.wa-icon { font-size:24px; flex-shrink:0; }
+.wa-text strong { display:block; font-size:11px; letter-spacing:2px; text-transform:uppercase; margin-bottom:2px; }
+.wa-text span { font-size:12px; opacity:.75; }
+.events-note { font-size:11px; color:var(--stone); line-height:1.7; text-align:center; }
+
+/* EVENTS TAB - NEW */
+.events-intro { text-align:center; padding:36px 0 20px; max-width:1100px; margin:0 auto; }
+.events-intro p { font-size:14px; color:var(--stone); max-width:580px; margin:0 auto 8px; line-height:1.85; }
+.event-use-cases { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:0 auto 32px; max-width:1100px; }
+.event-pill { font-size:11px; letter-spacing:1px; padding:7px 14px; border:1px solid rgba(138,125,107,.25); color:var(--stone); border-radius:2px; }
+.event-tiers { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin:0 auto; max-width:1100px; }
+.event-tier-card { background:var(--warm-white); border:1px solid rgba(138,125,107,.2); padding:28px 24px; cursor:pointer; transition:all .25s; display:flex; flex-direction:column; gap:12px; }
+.event-tier-card:hover, .event-tier-card.selected { border-color:var(--gold); background:rgba(201,168,76,.04); }
+.event-tier-card.tier-grand { background:var(--deep-brown); border-color:var(--gold); }
+.event-tier-card.tier-grand .tier-name, .event-tier-card.tier-grand .tier-price { color:var(--light-gold); }
+.event-tier-card.tier-grand .tier-guests, .event-tier-card.tier-grand .tier-desc, .event-tier-card.tier-grand .tier-price-sub { color:rgba(245,240,232,.55); }
+.event-tier-card.tier-grand .tier-select-btn { border-color:rgba(201,168,76,.4); color:var(--light-gold); }
+.tier-top { display:flex; justify-content:space-between; align-items:flex-start; gap:8px; }
+.tier-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--deep-brown); margin-bottom:4px; }
+.tier-guests { font-size:11px; color:var(--stone); letter-spacing:.5px; }
+.tier-price-col { text-align:right; flex-shrink:0; }
+.tier-price { font-family:'Cormorant Garamond',serif; font-size:28px; color:var(--deep-brown); line-height:1; }
+.tier-price-sub { font-size:9px; letter-spacing:1px; text-transform:uppercase; color:var(--stone); margin-top:2px; }
+.tier-desc { font-size:12px; color:var(--stone); line-height:1.75; flex:1; }
+.tier-select-btn { font-size:10px; letter-spacing:2px; text-transform:uppercase; border:1px solid rgba(138,125,107,.3); padding:9px 14px; text-align:center; color:var(--deep-brown); transition:all .25s; margin-top:4px; }
+.event-tier-card:hover .tier-select-btn, .event-tier-card.selected .tier-select-btn { background:var(--gold); border-color:var(--gold); color:var(--deep-brown); }
+.event-enquiry-box { display:none; margin:2px auto 0; background:var(--cream); border:1px solid rgba(201,168,76,.3); border-top:3px solid var(--gold); max-width:1100px; }
+.event-enquiry-box.open { display:block; }
+.event-enquiry-inner { max-width:700px; margin:0 auto; padding:40px; }
+.event-footer-note { text-align:center; font-size:11px; color:var(--stone); margin:24px auto 0; max-width:1100px; line-height:1.8; }
+@media(max-width:900px) {
+  .event-tiers { grid-template-columns:1fr 1fr; }
+  .event-enquiry-inner { padding:32px 24px; }
+}
+@media(max-width:600px) { .event-tiers { grid-template-columns:1fr; } }
+
+/* ROOMS */
+#rooms { background:var(--warm-white); padding:100px 0 0; }
+.rooms-header { text-align:center; padding:0 60px 60px; }
+.rooms-header .divider { margin:0 auto 32px; }
+.rooms-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; }
+.room-card { position:relative; overflow:hidden; cursor:pointer; aspect-ratio:4/3; }
+.room-card:first-child { grid-column:span 2; aspect-ratio:16/9; }
+.room-img { width:100%; height:100%; object-fit:cover; transition:transform .8s ease; display:block; }
+.room-card:hover .room-img { transform:scale(1.05); }
+.room-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(20,13,8,.82) 0%,rgba(20,13,8,.05) 55%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px 32px; transition:background .4s; }
+.room-card:hover .room-overlay { background:linear-gradient(to top,rgba(20,13,8,.92) 0%,rgba(20,13,8,.2) 60%); }
+.room-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--cream); margin-bottom:4px; }
+.room-desc { font-size:12px; color:rgba(245,240,232,.7); line-height:1.6; max-height:0; overflow:hidden; transition:max-height .4s ease; }
+.room-card:hover .room-desc { max-height:60px; }
+
+/* EXPERIENCE */
+#experience { background:var(--forest); padding:100px 60px; }
+.exp-header { text-align:center; margin-bottom:60px; }
+.exp-header .section-title { color:var(--cream); }
+.exp-header .divider { background:var(--gold); margin:0 auto 32px; }
+.exp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; max-width:1100px; margin:0 auto; background:rgba(245,240,232,.08); }
+.exp-item { padding:48px 40px; background:var(--forest); transition:background .3s; }
+.exp-item:hover { background:rgba(245,240,232,.04); }
+.exp-icon { font-size:28px; margin-bottom:20px; }
+.exp-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:400; color:var(--cream); margin-bottom:10px; }
+.exp-desc { font-size:13px; color:rgba(245,240,232,.6); line-height:1.8; }
+
+/* SERVICES */
+#services { background:var(--cream); padding:100px 60px; }
+.services-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:80px; align-items:start; }
+.services-left .section-title { margin-bottom:20px; }
+.services-left p { font-size:15px; line-height:1.9; color:var(--stone); font-weight:300; }
+.services-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(138,125,107,.2); }
+.service-item { padding:32px; border-bottom:1px solid rgba(138,125,107,.2); border-right:1px solid rgba(138,125,107,.2); }
+.service-item:nth-child(even) { border-right:none; }
+.service-item:nth-last-child(-n+2) { border-bottom:none; }
+.service-icon { font-size:22px; margin-bottom:12px; }
+.service-name { font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:400; color:var(--deep-brown); margin-bottom:6px; }
+.service-desc { font-size:12px; color:var(--stone); line-height:1.7; }
+
+/* GALLERY */
+#gallery { background:var(--deep-brown); padding:80px 0; overflow:hidden; }
+.gallery-header { text-align:center; padding:0 60px; margin-bottom:48px; }
+.gallery-header .section-title { color:var(--cream); }
+.gallery-header .divider { background:var(--gold); margin:0 auto; }
+.gallery-strip { display:flex; gap:4px; overflow-x:auto; padding:0 60px; scrollbar-width:none; }
+.gallery-strip::-webkit-scrollbar { display:none; }
+.gallery-thumb { flex:0 0 320px; height:420px; overflow:hidden; }
+.gallery-thumb img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+.gallery-thumb:hover img { transform:scale(1.08); }
+
+/* LOCATION */
+#location { padding:100px 60px; background:var(--warm-white); display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+#location .section-title { margin-bottom:20px; }
+.loc-body { font-size:15px; line-height:1.9; color:var(--stone); margin-bottom:24px; font-weight:300; }
+.location-details { display:flex; flex-direction:column; gap:12px; }
+.loc-item { display:flex; gap:16px; align-items:flex-start; font-size:13px; color:var(--deep-brown); }
+.loc-icon { color:var(--gold); font-size:16px; margin-top:1px; flex-shrink:0; }
+.map-embed { height:420px; background:var(--sand); overflow:hidden; box-shadow:0 20px 60px rgba(42,31,20,.12); }
+.map-embed iframe { width:100%; height:100%; border:none; }
+
+/* CONTACT */
+#contact { background:var(--deep-brown); padding:80px 60px; }
+.contact-inner { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+#contact .section-title { color:var(--cream); }
+.contact-body { font-size:15px; line-height:1.9; color:rgba(245,240,232,.65); font-weight:300; }
+.contact-links { display:flex; flex-direction:column; gap:16px; margin-top:32px; }
+.contact-link { display:flex; gap:16px; align-items:center; font-size:14px; color:rgba(245,240,232,.8); text-decoration:none; transition:color .3s; }
+.contact-link:hover { color:var(--gold); }
+.contact-link-icon { color:var(--gold); width:20px; text-align:center; }
+.contact-form-box { background:rgba(255,255,255,.04); padding:40px; }
+.contact-form-box .form-group input, .contact-form-box .form-group textarea { background:rgba(255,255,255,.05); border-color:rgba(245,240,232,.1); color:var(--cream); }
+.contact-form-box .form-group input::placeholder, .contact-form-box .form-group textarea::placeholder { color:rgba(245,240,232,.22); }
+.contact-form-box .form-group label { color:rgba(245,240,232,.5); }
+
+/* FOOTER */
+footer { background:#1a1009; padding:40px 60px; display:flex; justify-content:space-between; align-items:center; }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:18px; letter-spacing:4px; color:rgba(245,240,232,.55); text-transform:uppercase; }
+.footer-copy { font-size:11px; color:rgba(245,240,232,.28); letter-spacing:1px; }
+.footer-socials { display:flex; gap:16px; }
+.footer-socials a { color:rgba(245,240,232,.5); text-decoration:none; font-size:11px; letter-spacing:1.5px; text-transform:uppercase; transition:color .3s; }
+.footer-socials a:hover { color:var(--gold); }
+
+/* PRICING TABLE */
+.pricing-table-wrap { margin-top:32px; border-top:1px solid rgba(138,125,107,.2); padding-top:28px; }
+.pricing-table-title { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--stone); margin-bottom:20px; }
+.pricing-table { width:100%; border-collapse:collapse; }
+.pricing-table th { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); font-weight:400; padding:0 0 12px; text-align:left; border-bottom:1px solid rgba(138,125,107,.15); }
+.pricing-table th.season-col { text-align:right; }
+.pricing-table td { padding:14px 0; border-bottom:1px solid rgba(138,125,107,.08); vertical-align:top; }
+.pricing-table td.space-name { font-size:12px; color:var(--deep-brown); font-weight:500; letter-spacing:.5px; padding-right:16px; white-space:nowrap; }
+.pricing-table td.rates { text-align:right; }
+.rate-block { display:inline-flex; flex-direction:column; align-items:flex-end; gap:3px; }
+.rate-we { font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--deep-brown); line-height:1; }
+.rate-wd { font-size:10px; color:var(--stone); letter-spacing:.5px; }
+.pricing-table-note { font-size:11px; color:var(--stone); margin-top:14px; line-height:1.7; }
+
+/* PRICING TOGGLE */
+.pricing-toggle-wrap { margin-top:20px; border-top:1px solid rgba(138,125,107,.15); }
+.pricing-toggle-btn { width:100%; background:none; border:none; padding:14px 0; display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); }
+.pricing-toggle-btn:hover { color:var(--gold); }
+.pricing-toggle-arrow { transition:transform .3s; display:inline-block; }
+.pricing-toggle-btn.open .pricing-toggle-arrow { transform:rotate(90deg); }
+.pricing-toggle-body { display:none; padding-bottom:16px; }
+.pricing-toggle-body.open { display:block; }
+
+/* MODAL */
+.modal-overlay { display:none; position:fixed; inset:0; z-index:800; background:rgba(20,13,8,.86); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px; }
+.modal-overlay.open { display:flex; }
+.modal { background:var(--warm-white); max-width:500px; width:100%; padding:48px; position:relative; animation:fadeUp .3s ease; }
+.modal-close { position:absolute; top:20px; right:20px; background:none; border:none; font-size:22px; cursor:pointer; color:var(--stone); }
+.modal-title { font-family:'Cormorant Garamond',serif; font-size:30px; color:var(--deep-brown); margin-bottom:8px; }
+.modal-sub { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--stone); margin-bottom:24px; }
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  section { padding:80px 24px; }
+  #story { grid-template-columns:1fr; } .story-image { height:350px; } .story-text { padding:60px 32px; }
+  #booking { padding:80px 24px; }
+  .booking-grid { grid-template-columns:1fr; }
+  .calendar-panel { padding:32px 24px; }
+  .rooms-grid { grid-template-columns:1fr 1fr; }
+  .room-card:first-child { grid-column:span 2; aspect-ratio:16/9; }
+  .events-panel { grid-template-columns:1fr; } .events-left, .events-right { padding:48px 32px; }
+  .exp-grid { grid-template-columns:1fr; }
+  .services-inner { grid-template-columns:1fr; gap:48px; }
+  #location { grid-template-columns:1fr; padding:80px 24px; }
+  #contact { padding:80px 24px; } .contact-inner { grid-template-columns:1fr; }
+  footer { flex-direction:column; gap:20px; text-align:center; padding:32px 24px; }
+  .form-row { grid-template-columns:1fr; }
+  .gallery-thumb { flex:0 0 260px; height:340px; }
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="#booking" class="sticky-book">📅 Request to Book</a>
+  <a href="https://wa.me/923185605693?text=Hi%2C%20I%27d%20like%20to%20find%20out%20more%20about%20Samarkand%20House." class="sticky-wa" target="_blank">💬 WhatsApp</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Samarkand House</a>
+  <div class="nav-links">
+    <a href="#story">Our Story</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#experience">Activities</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#location">Location</a>
+    <a href="#booking" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Murree Hills · Pakistan</p>
+    <h1 class="hero-title">The <em>Samarkand</em><br>House</h1>
+    <p class="hero-subtitle">Timeless Design · Natural Beauty · Curated Luxury</p>
+    <div class="hero-btns">
+      <a href="#booking" class="btn-primary">Request to Book</a>
+      <a href="#story" class="btn-outline">Discover More</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Scroll</div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-image"></div>
+  <div class="story-text">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">A Legacy <em>Cast in Stone</em></h2>
+    <div class="divider"></div>
+    <p>Designed in the 1960s with Frank Lloyd Wright's organic modernist touch, Samarkand House is built around two massive sandstone boulders — architecture that feels grown from the earth rather than placed upon it.</p>
+    <p>Just 50 minutes from Islamabad yet worlds apart, this former family retreat takes its name from the ancient Silk Road city of Samarkand, evoking a spirit of history, fusion, and enchantment.</p>
+    <p>We host just one group at a time. Your stay is private, curated, and entirely yours.</p>
+    <div class="story-fact">
+      <p>"Where luxury meets nature, stories are shared over meals, and time slows in the embrace of the land."</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header">
+    <p class="section-label">Gallery</p>
+    <h2 class="section-title" style="color:var(--cream)">Life at <em style="color:var(--light-gold)">Samarkand</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="gallery-strip">
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_dcab9cba01f94a5cb600d88b57513b34~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_dcab9cba01f94a5cb600d88b57513b34~mv2.jpg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_a3807ef21915492b8f1b43c8d9bbe2c2~mv2.jpeg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_a3807ef21915492b8f1b43c8d9bbe2c2~mv2.jpeg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_98a890ed6ca54fea8ebc66576e36758b~mv2.jpeg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_98a890ed6ca54fea8ebc66576e36758b~mv2.jpeg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_cb97d06fa2634196ae51508cfdf44ff4~mv2.jpeg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_cb97d06fa2634196ae51508cfdf44ff4~mv2.jpeg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_1ebb3b0ca42c48e4a1f6fdb331efc1ed~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_1ebb3b0ca42c48e4a1f6fdb331efc1ed~mv2.jpg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_2aa85636e49e4211acfa4b20afff6bfa~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/Samarkand21-42.jpg" alt="Samarkand"></div>
+    <div class="gallery-thumb"><img src="https://static.wixstatic.com/media/b5ec9b_6a36eb67263349b7bd8c671706156b07~mv2.jpg/v1/fill/w_800,h_1100,al_c,q_85,usm_0.66_1.00_0.01/Samarkand21-34.jpg" alt="Samarkand"></div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="booking-header">
+    <p class="section-label">Reservations</p>
+    <h2 class="section-title">Plan Your <em>Escape</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div>
+  <div class="booking-tabs">
+    <button class="tab-btn active" onclick="switchTab('stays',this)">🏡 &nbsp;Stays</button>
+    <button class="tab-btn" onclick="switchTab('events',this)">✨ &nbsp;Events &amp; Shoots</button>
+  </div>
+
+  <!-- STAYS TAB -->
+  <div class="tab-content active" id="tab-stays">
+    <div class="booking-grid">
+
+      <!-- CALENDAR -->
+      <div class="calendar-panel">
+        <span class="cal-header-label">Availability</span>
+        <div class="cal-nav">
+          <button class="cal-arrow" onclick="changeMonth(-1)">‹</button>
+          <span class="cal-month" id="cal-month-label"></span>
+          <button class="cal-arrow" onclick="changeMonth(1)">›</button>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="cal-legend">
+          <span><span class="legend-dot" style="background:var(--gold)"></span>Selected</span>
+          <span><span class="legend-dot" style="background:var(--terracotta)"></span>Booked</span>
+          <span><span class="legend-dot" style="background:rgba(245,240,232,.3)"></span>Available</span>
+        </div>
+        <p id="cal-availability-note" style="font-size:11px;color:var(--stone);text-align:center;margin-top:10px;min-height:16px;"></p>
+      </div>
+
+      <!-- REQUEST FORM -->
+      <div class="request-panel">
+        <p class="request-title">Request to Book</p>
+        <p class="request-sub">One group · Complete privacy</p>
+
+        <!-- SPACE SELECTOR -->
+        <div class="spaces-section">
+          <span class="spaces-label">Your Spaces</span>
+          <div class="space-card main-house">
+            <div class="space-card-row">
+              <div class="space-card-left">
+                <span class="space-name">The Main House</span>
+                <span class="space-detail">4 bedrooms + bunk room · pool &amp; grounds · up to 10 guests</span>
+              </div>
+              <div class="space-price-col">
+                <div class="space-price" id="main-price-display">160k–250k</div>
+                <div class="space-price-sub">/ night</div>
+              </div>
+            </div>
+          </div>
+          <div class="space-card" id="cottage-card" onclick="toggleAddon('cottage')">
+            <div class="space-card-row">
+              <div class="space-card-left">
+                <div class="addon-checkbox">
+                  <input type="checkbox" class="addon-check" id="cottage-check" onclick="event.stopPropagation();toggleAddon('cottage')">
+                  <div>
+                    <span class="space-name">+ Cottage</span>
+                    <span class="space-detail" style="display:block;">2 queen beds · private garden retreat</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-price-col">
+                <div class="space-price" id="cottage-price-display">+64k–100k</div>
+                <div class="space-price-sub">/ night</div>
+              </div>
+            </div>
+          </div>
+          <div class="space-card" id="annex-card" onclick="toggleAddon('annex')">
+            <div class="space-card-row">
+              <div class="space-card-left">
+                <div class="addon-checkbox">
+                  <input type="checkbox" class="addon-check" id="annex-check" onclick="event.stopPropagation();toggleAddon('annex')">
+                  <div>
+                    <span class="space-name">+ Annex</span>
+                    <span class="space-detail" style="display:block;">1 queen bed · attached to cottage</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-price-col">
+                <div class="space-price" id="annex-price-display">+32k–50k</div>
+                <div class="space-price-sub">/ night</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GUEST DETAILS -->
+        <div class="form-row">
+          <div class="form-group"><label>Full Name</label><input type="text" id="f-firstname" placeholder="Ayesha Khan"></div>
+          <div class="form-group"><label>WhatsApp</label><input type="tel" id="f-phone" placeholder="+92 300 000 0000"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Guests</label>
+            <select id="f-guests">
+              <option>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option>
+              <option>8</option><option>9</option><option>10</option>
+              <option>11+</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Occasion</label><input type="text" id="f-notes" placeholder="Birthday, family trip, anniversary..."></div>
+        </div>
+
+        <!-- PRICE SUMMARY -->
+        <div class="price-summary">
+          <div class="price-breakdown">
+            <div class="price-line">
+              <span class="price-line-label">Main House</span>
+              <span class="price-line-val" id="breakdown-main">—</span>
+            </div>
+            <div class="price-line" id="breakdown-cottage-row" style="display:none;">
+              <span class="price-line-label">+ Cottage</span>
+              <span class="price-line-val" id="breakdown-cottage">—</span>
+            </div>
+            <div class="price-line" id="breakdown-annex-row" style="display:none;">
+              <span class="price-line-label">+ Annex</span>
+              <span class="price-line-val" id="breakdown-annex">—</span>
+            </div>
+            <div class="price-line" id="breakdown-nights-row" style="display:none;">
+              <span class="price-line-label" id="breakdown-nights-label"></span>
+              <span class="price-line-val muted" id="breakdown-season"></span>
+            </div>
+          </div>
+          <div class="price-total-row">
+            <span class="price-total-label">Total</span>
+            <span class="price-total-val" id="total-display">Select dates</span>
+          </div>
+          <div class="price-deposit-row">
+            <span class="price-deposit-label">To confirm
+              <span>50% deposit · bank transfer</span>
+            </span>
+            <span class="price-deposit-val" id="deposit-display">—</span>
+          </div>
+        </div>
+
+        <button class="request-btn" onclick="sendRequest()">
+          <span>💬</span> Send Booking Request via WhatsApp
+        </button>
+
+        <!-- PRICING TOGGLE -->
+        <div class="pricing-toggle-wrap">
+          <button class="pricing-toggle-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+            <span>How pricing works</span>
+            <span class="pricing-toggle-arrow">›</span>
+          </button>
+          <div class="pricing-toggle-body">
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="season-col">Peak<br><span style="font-size:9px;letter-spacing:1px;opacity:.6;">Mar – Oct</span></th>
+                  <th class="season-col">Off-season<br><span style="font-size:9px;letter-spacing:1px;opacity:.6;">Nov – Feb</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="space-name">Main House</td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">250,000</span><span class="rate-wd">200,000 weekdays</span></div></td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">200,000</span><span class="rate-wd">160,000 weekdays</span></div></td>
+                </tr>
+                <tr>
+                  <td class="space-name">+ Cottage</td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">100,000</span><span class="rate-wd">80,000 weekdays</span></div></td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">80,000</span><span class="rate-wd">64,000 weekdays</span></div></td>
+                </tr>
+                <tr>
+                  <td class="space-name">+ Annex</td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">50,000</span><span class="rate-wd">40,000 weekdays</span></div></td>
+                  <td class="rates"><div class="rate-block"><span class="rate-we">40,000</span><span class="rate-wd">32,000 weekdays</span></div></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="pricing-table-note">Weekend Thu–Sun · Weekday Mon–Wed · Exact total calculated when you select dates.</p>
+
+            <!-- HOW PRICING WORKS DROPDOWN -->
+            <div class="pricing-toggle-wrap">
+              <button class="pricing-toggle-btn" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                <span>How pricing works</span>
+                <span class="pricing-toggle-arrow">›</span>
+              </button>
+              <div class="pricing-toggle-body">
+                <p style="font-size:12px;color:var(--stone);line-height:1.85;margin-bottom:10px;">
+                  Samarkand House is booked exclusively — one group at a time, for the entire property. The nightly rate shown is for <strong>The Main House</strong>, which sleeps up to 10 guests across 4 bedrooms and a bunk room, with full use of the grounds, gardens, and pool.
+                </p>
+                <p style="font-size:12px;color:var(--stone);line-height:1.85;margin-bottom:10px;">
+                  <strong>The Cottage</strong> and <strong>The Annex</strong> are available as add-ons if your group needs extra space. Add them when selecting your dates and the total will update automatically.
+                </p>
+                <p style="font-size:12px;color:var(--stone);line-height:1.85;margin-bottom:10px;">
+                  <strong>Peak season</strong> runs March through October. <strong>Weekend rates</strong> apply Thursday through Sunday. All other nights are charged at the weekday rate. Your exact total is calculated night by night when you select your dates.
+                </p>
+                <p style="font-size:12px;color:var(--stone);line-height:1.85;">
+                  A <strong>50% deposit</strong> is required to confirm your booking, with the balance due before check-in. A 16% tax applies to all bookings. For custom packages, extended stays, or event pricing, please get in touch via WhatsApp.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- EVENTS TAB -->
+  <div class="tab-content" id="tab-events">
+    <div class="events-intro">
+      <p>Samarkand House is available for exclusive private hire — weddings, corporate retreats, shoots, mehndis, and celebrations of all kinds. The entire estate is yours. Maximum 200 guests.</p>
+      <p class="wa-soft-link">All events are booked through our manager. <a href="https://wa.me/923185605693?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20an%20event%20at%20Samarkand%20House." target="_blank">Chat with us on WhatsApp to get started →</a></p>
+    </div>
+    <div class="event-use-cases">
+      <span class="event-pill">💍 Weddings &amp; Nikkahs</span>
+      <span class="event-pill">🌸 Mehndis &amp; Dholkis</span>
+      <span class="event-pill">📸 Photo &amp; Film Shoots</span>
+      <span class="event-pill">🎂 Private Celebrations</span>
+      <span class="event-pill">🏢 Corporate Retreats</span>
+      <span class="event-pill">🎨 Brand Activations</span>
+    </div>
+    <div class="event-tiers">
+      <div class="event-tier-card" onclick="selectEventTier(this,'Intimate','Up to 25 guests','500,000')">
+        <div class="tier-top"><div><p class="tier-name">Intimate</p><p class="tier-guests">Up to 25 guests</p></div><div class="tier-price-col"><p class="tier-price">500k</p><p class="tier-price-sub">day rate · PKR</p></div></div>
+        <p class="tier-desc">Small nikkah, birthday dinner, private corporate lunch, intimate shoot. Full use of the house, gardens, and pool.</p>
+        <div class="tier-select-btn">Select &amp; Enquire</div>
+      </div>
+      <div class="event-tier-card" onclick="selectEventTier(this,'Social','Up to 75 guests','800,000')">
+        <div class="tier-top"><div><p class="tier-name">Social</p><p class="tier-guests">Up to 75 guests</p></div><div class="tier-price-col"><p class="tier-price">800k</p><p class="tier-price-sub">day rate · PKR</p></div></div>
+        <p class="tier-desc">Mehndi, reception, brand activation, corporate day. Full estate access with space to set up marquees in the grounds.</p>
+        <div class="tier-select-btn">Select &amp; Enquire</div>
+      </div>
+      <div class="event-tier-card" onclick="selectEventTier(this,'Estate','Up to 125 guests','1,200,000')">
+        <div class="tier-top"><div><p class="tier-name">Estate</p><p class="tier-guests">Up to 125 guests</p></div><div class="tier-price-col"><p class="tier-price">1.2M</p><p class="tier-price-sub">day rate · PKR</p></div></div>
+        <p class="tier-desc">Full wedding, large celebration, or major shoot. Complete exclusive use of the house, cottage, annex, grounds, and pool.</p>
+        <div class="tier-select-btn">Select &amp; Enquire</div>
+      </div>
+      <div class="event-tier-card tier-grand" onclick="selectEventTier(this,'Grand','Up to 200 guests','1,800,000')">
+        <div class="tier-top"><div><p class="tier-name">Grand</p><p class="tier-guests">Up to 200 guests</p></div><div class="tier-price-col"><p class="tier-price">1.8M</p><p class="tier-price-sub">day rate · PKR</p></div></div>
+        <p class="tier-desc">The full estate at maximum capacity. Our most exclusive offering — for events that demand the very best of Samarkand House.</p>
+        <div class="tier-select-btn">Select &amp; Enquire</div>
+      </div>
+    </div>
+    <div class="event-enquiry-box" id="event-enquiry-box">
+      <div class="event-enquiry-inner">
+        <div>
+          <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Selected Package</p>
+          <p id="evt-selected-tier" style="font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--deep-brown);margin-bottom:4px;">—</p>
+          <p id="evt-selected-detail" style="font-size:12px;color:var(--stone);"></p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;">
+          <div class="form-group"><label>Your Name</label><input type="text" id="evt-name" placeholder="Full name"></div>
+          <div class="form-group"><label>WhatsApp / Phone</label><input type="tel" id="evt-phone" placeholder="+92 300 000 0000"></div>
+          <div class="form-group"><label>Event Date</label><input type="text" id="evt-date" placeholder="e.g. 15 August 2026"></div>
+          <div class="form-group"><label>Event Type</label><input type="text" id="evt-type" placeholder="e.g. Wedding, Corporate, Shoot"></div>
+        </div>
+        <div class="form-group" style="margin-top:0;"><label>Additional Notes</label><textarea id="evt-notes" placeholder="Guest count, setup requirements, anything else..." style="height:70px;resize:none;"></textarea></div>
+        <button class="request-btn" onclick="sendEventRequest()" style="margin-top:8px;"><span>💬</span> Send Event Enquiry via WhatsApp</button>
+        <p class="request-note">Our manager will respond within a few hours to discuss your event in detail.</p>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--stone);margin-top:24px;line-height:1.8;">All prices are day rates. Overnight stays for event guests can be arranged separately at standard nightly rates.<br>A refundable security deposit applies to all events.</p>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="rooms-header">
+    <p class="section-label">Accommodations</p>
+    <h2 class="section-title">Your Private <em>Sanctuary</em></h2>
+    <div class="divider"></div>
+    <p style="font-size:14px;color:var(--stone);max-width:520px;margin:0 auto;line-height:1.8;">The main house sleeps up to 10 across four bedrooms and a bunk room. The cottage and annex in the grounds are available as add-ons.</p>
+  </div>
+  <div class="rooms-grid">
+    <div class="room-card"><img class="room-img" src="https://static.wixstatic.com/media/b5ec9b_a9cb7d7cf9b54d1ca0cc6242345b329e~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_a9cb7d7cf9b54d1ca0cc6242345b329e~mv2.jpg" alt="Master Bedroom"><div class="room-overlay"><p class="room-name">The Master Bedroom</p><p class="room-desc">Sweeping views, antique furnishings, and a king bed framed by pine trees.</p></div></div>
+    <div class="room-card"><img class="room-img" src="https://static.wixstatic.com/media/b5ec9b_65844f08ed484c5b830587f2605cd044~mv2.jpg/v1/fill/w_600,h_800,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_65844f08ed484c5b830587f2605cd044~mv2.jpg" alt="The Nest"><div class="room-overlay"><p class="room-name">The Nest</p><p class="room-desc">Cosy and intimate, tucked into the heart of the house.</p></div></div>
+    <div class="room-card"><img class="room-img" src="https://static.wixstatic.com/media/b5ec9b_1cc9e985cd0a4b8e9719c53bb88ae40d~mv2.jpg/v1/fill/w_600,h_800,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_1cc9e985cd0a4b8e9719c53bb88ae40d~mv2.jpg" alt="The Library"><div class="room-overlay"><p class="room-name">The Library</p><p class="room-desc">A reader's retreat with floor-to-ceiling shelves and a fireplace nook.</p></div></div>
+    <div class="room-card"><img class="room-img" src="https://static.wixstatic.com/media/b5ec9b_0f39fb758ff948ab88df841a3ec6dd42~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_0f39fb758ff948ab88df841a3ec6dd42~mv2.jpg" alt="Garden Suite"><div class="room-overlay"><p class="room-name">The Garden Suite</p><p class="room-desc">Opens directly onto the lush gardens — nature at arm's reach.</p></div></div>
+    <div class="room-card"><img class="room-img" src="https://static.wixstatic.com/media/b5ec9b_1ce8642c95774aea80d25a67f43b252d~mv2.jpg/v1/fill/w_600,h_800,al_c,q_85,usm_0.66_1.00_0.01/b5ec9b_1ce8642c95774aea80d25a67f43b252d~mv2.jpg" alt="Children's Room"><div class="room-overlay"><p class="room-name">Children's Room</p><p class="room-desc">Whimsical and safe, designed for the youngest adventurers.</p></div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="exp-header">
+    <p class="section-label" style="color:var(--gold)">Activities</p>
+    <h2 class="section-title">The <em style="color:var(--light-gold)">Experience</em></h2>
+    <div class="divider"></div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-item"><div class="exp-icon">🥾</div><p class="exp-name">Hiking Trails</p><p class="exp-desc">Scenic trails through pine-covered Murree Hills with breathtaking vistas.</p></div>
+    <div class="exp-item"><div class="exp-icon">🎾</div><p class="exp-name">Tennis</p><p class="exp-desc">Rally on our private court set amidst lush greenery.</p></div>
+    <div class="exp-item"><div class="exp-icon">🎬</div><p class="exp-name">Movie Nights</p><p class="exp-desc">Cosy evening screenings under the stars or in the warmth of the living room.</p></div>
+    <div class="exp-item"><div class="exp-icon">🦜</div><p class="exp-name">Birdwatching</p><p class="exp-desc">Spot rare and colourful Himalayan species in our private grounds.</p></div>
+    <div class="exp-item"><div class="exp-icon">🌿</div><p class="exp-name">Organic Garden</p><p class="exp-desc">Produce that travels five steps from soil to table.</p></div>
+    <div class="exp-item"><div class="exp-icon">🎨</div><p class="exp-name">Plein Air Painting</p><p class="exp-desc">Capture the mountains and forests in watercolour under the open sky.</p></div>
+    <div class="exp-item"><div class="exp-icon">🔥</div><p class="exp-name">Bonfires</p><p class="exp-desc">Gather under a canopy of stars — warmth, stories, and chai.</p></div>
+    <div class="exp-item"><div class="exp-icon">🧘</div><p class="exp-name">Yoga &amp; Wellness</p><p class="exp-desc">Guided or solo morning sessions on the terrace.</p></div>
+    <div class="exp-item"><div class="exp-icon">♟️</div><p class="exp-name">Board Games</p><p class="exp-desc">Classic games and timeless fun for rainy afternoons.</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <div class="services-left">
+      <p class="section-label">Included Services</p>
+      <h2 class="section-title">Everything <em>Taken Care Of</em></h2>
+      <div class="divider"></div>
+      <p>Every detail of your stay is managed so you can be fully present. From gourmet meals to 24/7 security — your comfort is our purpose.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item"><div class="service-icon">🍳</div><p class="service-name">Complimentary Breakfast</p><p class="service-desc">A hearty, freshly made breakfast every morning.</p></div>
+      <div class="service-item"><div class="service-icon">🍽️</div><p class="service-name">Curated Meals</p><p class="service-desc">Hand-crafted dishes tailored to your tastes.</p></div>
+      <div class="service-item"><div class="service-icon">🧹</div><p class="service-name">Daily Housekeeping</p><p class="service-desc">Seamless, discreet upkeep throughout your stay.</p></div>
+      <div class="service-item"><div class="service-icon">👗</div><p class="service-name">Laundry Service</p><p class="service-desc">Same-day care so your wardrobe stays fresh.</p></div>
+      <div class="service-item"><div class="service-icon">📶</div><p class="service-name">High-Speed WiFi</p><p class="service-desc">Stay connected in the heart of nature.</p></div>
+      <div class="service-item"><div class="service-icon">🛡️</div><p class="service-name">24/7 Security</p><p class="service-desc">Armed security for absolute peace of mind.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<div id="location">
+  <div>
+    <p class="section-label">Getting Here</p>
+    <h2 class="section-title">Nestled in the <em>Murree Hills</em></h2>
+    <div class="divider"></div>
+    <p class="loc-body">Just one hour's drive from Islamabad, Samarkand House sits in the serene pine-forested hills of Murree — effortlessly accessible yet completely removed from the noise of the city.</p>
+    <div class="location-details">
+      <div class="loc-item"><span class="loc-icon">📍</span><span>Murree Hills, Punjab, Pakistan · Exact address shared upon booking</span></div>
+      <div class="loc-item"><span class="loc-icon">🚗</span><span>~50–60 min from Islamabad · ~1 hr 15 min from Rawalpindi</span></div>
+      <div class="loc-item"><span class="loc-icon">✈️</span><span>~90 min from Islamabad International Airport (ISB)</span></div>
+      <div class="loc-item"><span class="loc-icon">📞</span><span>Transfer arrangements available upon request</span></div>
+    </div>
+  </div>
+  <div class="map-embed">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53170.37!2d73.39!3d33.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df97c0b0e43891%3A0x4b5c88a7c8b8c5f!2sMurree%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1" allowfullscreen loading="lazy"></iframe>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's Plan Your <em>Visit</em></h2>
+      <div class="divider"></div>
+      <p class="contact-body">We'd love to hear from you. Whether you have questions, special requests, or just want to know more — reach out and we'll respond within a few hours.</p>
+      <div class="contact-links">
+        <a href="https://wa.me/923185605693" class="contact-link" target="_blank"><span class="contact-link-icon">💬</span><span>+92 318 560 5693 — WhatsApp preferred</span></a>
+        <a href="tel:+923185605693" class="contact-link"><span class="contact-link-icon">📞</span><span>+92 318 560 5693</span></a>
+        <a href="mailto:samarkand.house.pk@gmail.com" class="contact-link"><span class="contact-link-icon">✉️</span><span>samarkand.house.pk@gmail.com</span></a>
+        <a href="https://www.instagram.com/samarkand.house/" class="contact-link" target="_blank"><span class="contact-link-icon">📸</span><span>@samarkand.house</span></a>
+      </div>
+    </div>
+    <div class="contact-form-box">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--cream);margin-bottom:24px;">Send a Message</p>
+      <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Phone</label><input type="tel"></div>
+        <div class="form-group"><label>Email</label><input type="email"></div>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Ask us anything..." style="height:110px;resize:none;"></textarea></div>
+      <button class="request-btn" onclick="sendContact()" style="margin-top:8px;">💬 &nbsp;Send via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">Samarkand House</p>
+  <p class="footer-copy">© 2026 Samarkand House, Murree Hills, Pakistan</p>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/samarkand.house/" target="_blank">Instagram</a>
+    <a href="https://wa.me/923185605693" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// NAV
+window.addEventListener('scroll',()=>{ document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>60); });
+
+// TABS
+function switchTab(tab,btn) {
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-'+tab).classList.add('active');
+}
+
+// PRICING RATES
+// [peak_we, peak_wd, off_we, off_wd]
+const RATES = {
+  main:    [250000, 200000, 200000, 160000],
+  cottage: [100000,  80000,  80000,  64000],
+  annex:   [ 50000,  40000,  40000,  32000],
+};
+
+function isPeak(date) { const m=date.getMonth()+1; return m>=3&&m<=10; }
+function isWeekend(date) { const d=date.getDay(); return d===0||d===4||d===5||d===6; }
+
+function getRateIndex(dateStr) {
+  const dt = new Date(dateStr);
+  const p=isPeak(dt), w=isWeekend(dt);
+  if(p&&w) return 0;
+  if(p&&!w) return 1;
+  if(!p&&w) return 2;
+  return 3;
+}
+
+function nightRate(dateStr, space) {
+  return RATES[space][getRateIndex(dateStr)];
+}
+
+function calcTotal(ci, co) {
+  let main=0, cottage=0, annex=0;
+  const cur=new Date(ci), end=new Date(co);
+  while(cur<end) {
+    const ds=`${cur.getFullYear()}-${String(cur.getMonth()+1).padStart(2,'0')}-${String(cur.getDate()).padStart(2,'0')}`;
+    main += nightRate(ds,'main');
+    if(document.getElementById('cottage-check').checked) cottage += nightRate(ds,'cottage');
+    if(document.getElementById('annex-check').checked) annex += nightRate(ds,'annex');
+    cur.setDate(cur.getDate()+1);
+  }
+  return {main, cottage, annex, total: main+cottage+annex};
+}
+
+function fmt(n) { return 'PKR '+(n/1000).toFixed(0)+'k'; }
+function fmtFull(n) { return 'PKR '+n.toLocaleString(); }
+
+// CALENDAR
+// ICAL CALENDAR INTEGRATION
+const ICAL_URL = 'https://calendar.google.com/calendar/ical/samarkand.house.pk%40gmail.com/public/basic.ics';
+let bookedRanges = [];
+
+function isBooked(dateStr) {
+  return bookedRanges.some(r => dateStr >= r.start && dateStr < r.end);
+}
+
+function parseICalDate(str) {
+  // Handles YYYYMMDD and YYYYMMDDTHHmmssZ formats
+  if (!str) return null;
+  const s = str.replace(/[TZ]/g, '');
+  return `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}`;
+}
+
+async function fetchBookedDates() {
+  const proxies = [
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(ICAL_URL)}`,
+    `https://corsproxy.io/?${encodeURIComponent(ICAL_URL)}`
+  ];
+  let text = null;
+  for (const proxy of proxies) {
+    try {
+      const res = await fetch(proxy);
+      if (res.ok) { text = await res.text(); break; }
+    } catch(e) { continue; }
+  }
+  if (!text) {
+    const note = document.getElementById('cal-availability-note');
+    if (note) note.textContent = 'Live availability unavailable — please WhatsApp us to confirm dates.';
+    renderCalendar(); return;
+  }
+  const events = text.split('BEGIN:VEVENT');
+  bookedRanges = [];
+  for (let i = 1; i < events.length; i++) {
+    const block = events[i];
+    const dtStartMatch = block.match(/DTSTART(?:;[^:]+)?:(\S+)/);
+    const dtEndMatch   = block.match(/DTEND(?:;[^:]+)?:(\S+)/);
+    if (dtStartMatch && dtEndMatch) {
+      const start = parseICalDate(dtStartMatch[1]);
+      let end = parseICalDate(dtEndMatch[1]);
+      if (!end || end <= start) {
+        const d = new Date(start); d.setDate(d.getDate()+1);
+        end = d.toISOString().slice(0,10);
+      }
+      if (start) bookedRanges.push({ start, end });
+    }
+  }
+  renderCalendar();
+}
+const _now = new Date();
+let currentYear=_now.getFullYear(), currentMonth=_now.getMonth()+1, checkIn=null, checkOut=null;
+const MONTHS=['','January','February','March','April','May','June','July','August','September','October','November','December'];
+const TODAY=new Date(); TODAY.setHours(0,0,0,0);
+
+function changeMonth(dir) {
+  currentMonth+=dir;
+  if(currentMonth>12){currentMonth=1;currentYear++;}
+  if(currentMonth<1){currentMonth=12;currentYear--;}
+  renderCalendar();
+}
+
+function renderCalendar() {
+  document.getElementById('cal-month-label').textContent=`${MONTHS[currentMonth]} ${currentYear}`;
+  const grid=document.getElementById('cal-grid');
+  grid.innerHTML='';
+  ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(d=>{
+    const el=document.createElement('div');el.className='cal-day-name';el.textContent=d;grid.appendChild(el);
+  });
+  const firstDay=new Date(currentYear,currentMonth-1,1).getDay();
+  const daysInMonth=new Date(currentYear,currentMonth,0).getDate();
+  for(let i=0;i<firstDay;i++){const el=document.createElement('div');el.className='cal-day empty';grid.appendChild(el);}
+  for(let d=1;d<=daysInMonth;d++){
+    const el=document.createElement('div');el.className='cal-day';el.textContent=d;
+    const ds=`${currentYear}-${String(currentMonth).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const dt=new Date(ds);
+    if(isBooked(ds)){el.classList.add('booked');}
+    else if(dt<TODAY){el.classList.add('past');}
+    else{
+      if(checkIn&&ds===checkIn)el.classList.add('selected');
+      if(checkOut&&ds===checkOut)el.classList.add('selected');
+      if(checkIn&&checkOut&&ds>checkIn&&ds<checkOut)el.classList.add('in-range');
+      el.addEventListener('click',()=>selectDate(ds));
+    }
+    grid.appendChild(el);
+  }
+}
+
+function rangeHasBookedDate(start, end) {
+  // Check if any date between start (exclusive) and end (exclusive) is booked
+  const cur = new Date(start); cur.setDate(cur.getDate()+1);
+  const endDt = new Date(end);
+  while (cur < endDt) {
+    const ds = cur.toISOString().slice(0,10);
+    if (isBooked(ds)) return true;
+    cur.setDate(cur.getDate()+1);
+  }
+  return false;
+}
+
+function selectDate(ds) {
+  if (!checkIn || (checkIn && checkOut)) {
+    // First click — set check-in
+    checkIn = ds; checkOut = null;
+    document.getElementById('checkin-display').textContent = formatDate(ds);
+    document.getElementById('checkout-display').textContent = 'Select checkout →';
+    document.getElementById('season-display').textContent = '';
+  } else {
+    // Second click — set checkout
+    if (ds <= checkIn) {
+      // Clicked before or on check-in — reset and start again
+      checkIn = ds; checkOut = null;
+      document.getElementById('checkin-display').textContent = formatDate(ds);
+      document.getElementById('checkout-display').textContent = 'Select checkout →';
+      document.getElementById('season-display').textContent = '';
+    } else if (rangeHasBookedDate(checkIn, ds)) {
+      // Range passes through a booked date — reset and start from this date
+      checkIn = ds; checkOut = null;
+      document.getElementById('checkin-display').textContent = formatDate(ds);
+      document.getElementById('checkout-display').textContent = 'Select checkout →';
+      document.getElementById('season-display').textContent = '';
+      const note = document.getElementById('cal-availability-note');
+      if (note) { note.textContent = 'Your selected range includes booked dates — please choose different dates.'; note.style.color='var(--terracotta)'; }
+      setTimeout(()=>{ const n=document.getElementById('cal-availability-note'); if(n){n.textContent='';n.style.color='';} }, 3000);
+    } else {
+      checkOut = ds;
+      const note = document.getElementById('cal-availability-note');
+      if (note) { note.textContent = ''; note.style.color = ''; }
+      updateDateDisplay();
+    }
+  }
+  renderCalendar(); updatePrices(); updateSpacePriceLabels();
+}
+
+function formatDate(str){return new Date(str).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+
+function updateDateDisplay(){
+  if(checkIn&&checkOut){
+    const nights=Math.round((new Date(checkOut)-new Date(checkIn))/86400000);
+    document.getElementById('checkin-display').textContent=formatDate(checkIn);
+    document.getElementById('checkout-display').textContent=formatDate(checkOut)+' · '+nights+'n';
+    const p=isPeak(new Date(checkIn));
+    document.getElementById('season-display').textContent=p?'Peak season (Mar–Oct)':'Off-season (Nov–Feb)';
+  }
+}
+
+function updateSpacePriceLabels(){
+  const ds = checkIn || `${currentYear}-${String(currentMonth).padStart(2,'0')}-01`;
+  const ri = getRateIndex(ds);
+  const ri2 = getRateIndex(ds);
+  document.getElementById('main-price-display').textContent = (RATES.main[ri2]/1000)+'k';
+  document.getElementById('cottage-price-display').textContent = '+'+(RATES.cottage[ri]/1000)+'k';
+  document.getElementById('annex-price-display').textContent = '+'+(RATES.annex[ri]/1000)+'k';
+}
+
+function updatePrices(){
+  if(!checkIn||!checkOut){
+    document.getElementById('total-display').textContent='Select dates';
+    document.getElementById('deposit-display').textContent='—';
+    document.getElementById('breakdown-main').textContent='—';
+    document.getElementById('breakdown-nights-row').style.display='none';
+    document.getElementById('breakdown-cottage-row').style.display='none';
+    document.getElementById('breakdown-annex-row').style.display='none';
+    return;
+  }
+  const nights=Math.round((new Date(checkOut)-new Date(checkIn))/86400000);
+  const {main,cottage,annex,total}=calcTotal(checkIn,checkOut);
+  const deposit=Math.round(total*0.5);
+  const peak=isPeak(new Date(checkIn));
+
+  // Main house line
+  document.getElementById('breakdown-main').textContent=fmtFull(main);
+
+  // Nights + season line
+  document.getElementById('breakdown-nights-row').style.display='flex';
+  document.getElementById('breakdown-nights-label').textContent=`${nights} night${nights>1?'s':''}`;
+  document.getElementById('breakdown-season').textContent=peak?'Peak season':'Off-season';
+
+  // Add-ons
+  const cottageOn=document.getElementById('cottage-check').checked;
+  const annexOn=document.getElementById('annex-check').checked;
+  document.getElementById('breakdown-cottage-row').style.display=cottageOn?'flex':'none';
+  if(cottageOn) document.getElementById('breakdown-cottage').textContent=fmtFull(cottage);
+  document.getElementById('breakdown-annex-row').style.display=annexOn?'flex':'none';
+  if(annexOn) document.getElementById('breakdown-annex').textContent=fmtFull(annex);
+
+  document.getElementById('total-display').textContent=fmtFull(total);
+  document.getElementById('deposit-display').textContent=fmtFull(deposit);
+}
+
+function toggleAddon(space){
+  const check=document.getElementById(space+'-check');
+  check.checked=!check.checked;
+  const card=document.getElementById(space+'-card');
+  card.style.borderColor=check.checked?'var(--gold)':'';
+  card.style.background=check.checked?'rgba(201,168,76,.04)':'';
+  updatePrices();
+}
+
+// BUILD WHATSAPP MESSAGE
+function buildWAMessage(){
+  const name=document.getElementById('f-firstname').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const guests=document.getElementById('f-guests').value;
+  const notes=document.getElementById('f-notes').value.trim();
+  const cottage=document.getElementById('cottage-check').checked;
+  const annex=document.getElementById('annex-check').checked;
+
+  let spaces='The Main House';
+  if(cottage) spaces+=' + The Cottage';
+  if(annex) spaces+=' + The Annex';
+
+  let dates=checkIn&&checkOut?`${formatDate(checkIn)} – ${formatDate(checkOut)} (${Math.round((new Date(checkOut)-new Date(checkIn))/86400000)} nights)`:'Not yet selected';
+
+  let priceInfo='';
+  if(checkIn&&checkOut){
+    const {total}=calcTotal(checkIn,checkOut);
+    priceInfo=`\nEstimated total: PKR ${total.toLocaleString()}\n50% deposit: PKR ${Math.round(total*0.5).toLocaleString()}`;
+  }
+
+  const msg=
+`Hi, I'd like to request a booking at Samarkand House.
+
+Name: ${name||'—'}
+Phone: ${phone||'—'}
+Dates: ${dates}
+Spaces: ${spaces}
+Guests: ${guests}
+Occasion: ${notes||'—'}${priceInfo}
+
+Please confirm availability and deposit details.`;
+
+  return encodeURIComponent(msg);
+}
+
+function sendRequest(){
+  if(!checkIn||!checkOut){ alert('Please select your check-in and check-out dates first.'); return; }
+  const msg=buildWAMessage();
+  window.open(`https://wa.me/923185605693?text=${msg}`,'_blank');
+}
+
+function sendContact(){
+  window.open('https://wa.me/923185605693?text=Hi%2C%20I%27d%20like%20to%20get%20in%20touch%20about%20Samarkand%20House.','_blank');
+}
+
+// EVENT TIERS
+let selectedEventTier = null;
+function selectEventTier(card, name, guests, price) {
+  document.querySelectorAll('.event-tier-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  selectedEventTier = { name, guests, price };
+  document.getElementById('evt-selected-tier').textContent = name + ' · PKR ' + price;
+  document.getElementById('evt-selected-detail').textContent = guests + ' · Day rate';
+  const box = document.getElementById('event-enquiry-box');
+  box.classList.add('open');
+  setTimeout(() => box.scrollIntoView({ behavior:'smooth', block:'nearest' }), 100);
+}
+
+function sendEventRequest() {
+  const name  = document.getElementById('evt-name').value.trim();
+  const phone = document.getElementById('evt-phone').value.trim();
+  const date  = document.getElementById('evt-date').value.trim();
+  const type  = document.getElementById('evt-type').value.trim();
+  const notes = document.getElementById('evt-notes').value.trim();
+  const tier  = selectedEventTier;
+  const msg =
+`Hi, I'd like to enquire about an event at Samarkand House.
+
+Name: ${name||'—'}
+Phone: ${phone||'—'}
+Event Date: ${date||'—'}
+Event Type: ${type||'—'}
+Package: ${tier ? tier.name+' ('+tier.guests+') · PKR '+tier.price : '—'}
+
+${notes ? 'Notes: '+notes : ''}
+
+Please get in touch to discuss details.`;
+  window.open(`https://wa.me/923185605693?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+// INIT
+fetchBookedDates(); // fetches Google Calendar then calls renderCalendar()
+updateSpacePriceLabels();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+var https = require('https');
+
+var ICAL_URL = 'https://calendar.google.com/calendar/ical/056012e08ca097c4007e4abd668fd35359e78251eb7bd830294b06d8c00bb09e%40group.calendar.google.com/private-fe1cc9b9b2f23062f21d38117b969d76/basic.ics';
+
+exports.handler = function(event, context, callback) {
+  https.get(ICAL_URL, function(res) {
+    var data = '';
+    res.on('data', function(chunk) { data += chunk; });
+    res.on('end', function() {
+      callback(null, {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'text/calendar',
+          'Access-Control-Allow-Origin': '*'
+        },
+        body: data
+      });
+    });
+  }).on('error', function(e) {
+    callback(null, { statusCode: 500, body: e.message });
+  });
+};
